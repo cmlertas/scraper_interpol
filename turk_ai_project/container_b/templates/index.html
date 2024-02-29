@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpol Database</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #D0F419;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            padding: 10px;
+            margin: 0 5px;
+            border: 1px solid #ddd;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interpol Database</h2>
+    <table>
+        <tr>
+            <th>Family Name</th>
+            <th>Forename</th>
+            <th>Gender</th>
+            <th>Date of Birth</th>
+            <th>Place of Birth</th>
+            <th>Nationality</th>
+            <th>Charge</th>
+            <th>Last Update Time</th>  <!-- Yeni sütun -->
+        </tr>
+        {% for person in data %}
+            <tr>
+                <td>{{ person['Family name'] }}</td>
+                <td>{{ person['Forename'] }}</td>
+                <td>{{ person['Gender'] }}</td>
+                <td>{{ person['Date of birth'] }}</td>
+                <td>{{ person['Place of birth'] }}</td>
+                <td>{{ person['Nationality'] }}</td>
+                <td>{{ person['Charge'] }}</td>
+                <td>{{ update_time }}</td>  <!-- Yeni sütunun içeriği -->
+            </tr>
+        {% endfor %}
+    </table>
+    
+    <div class="pagination">
+        {% if total_pages > 1 %}
+            {% for page_num in range(1, total_pages + 1) %}
+                <a href="{{ url_for('show_data', page=page_num) }}">{{ page_num }}</a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
