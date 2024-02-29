@@ -5,7 +5,7 @@ Bu proje, Interpol tarafından yayınlanan kırmızı liste verilerini çeken, b
 
 ## Başlangıç
 
-Yerel Makinanıza dosyayı çalıştırmak için yerel makinanıza docker kurmanız gerekecektir.
+Yerel Makinanıza dosyayı çalıştırmak için docker kurmanız gerekecektir.
 
 ### Gereksinimler
 
