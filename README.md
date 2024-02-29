@@ -24,5 +24,7 @@ Bazen docker chrome'u kurarken hata verebilmektedir(nadiren olsada) bunun için 
 1.Terminale docker-compose down yazıp konteynırları silin.
 2.docker rmi -f $(docker images -q) komutunu kullanarak var olan eski imageları silmek için bu komutu yazın.
 3.Tekrardan docker-compose up komutunu yazıp tekrar kuruluma başlayın.
+## Test İçin
+Test etmek için interpol_scraper_oop.oy dosyasında okunmak istenen sayfa sayısını azaltabilirsiniz.
 
 
