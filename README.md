@@ -1,6 +1,7 @@
 # Turk Ai Python Task 
 
 Bu proje, Interpol tarafından yayınlanan kırmızı liste verilerini çeken, bir veritabanına kaydeden ve web üzerinden paylaşan bir uygulamayı içerir.
+Detaylı açıklamalar kodların içinde yazılmıştır.
 
 
 ## Başlangıç
