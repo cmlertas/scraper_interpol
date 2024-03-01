@@ -18,8 +18,8 @@ Yerel Makinanıza dosyayı çalıştırmak için docker kurmanız gerekecektir.
 2. Dosyanın bulunduğu yerde terminalinizi açın.
 3. Docker Compose ile projeyi başlatın.(docker-compose up)
 4. Web sitesinin oluşturulması 20-25 dk arası sürecektir bunun nedeni veri alma süreci uzun sürmektedir.
-5.Sonucu görmek için http://localhost:5000/ adresine gidin.
-6.Kapatmak isterseniz control c ile kapatabilirsiniz.
+5. Sonucu görmek için http://localhost:5000/ adresine gidin.
+6. Kapatmak isterseniz control c ile kapatabilirsiniz.
 
 ## Test İçin
 Test etmeniz için test diye bir dosya daha oluşturdum o dosyada interpolün sayfasından sadece iki sayfayı taryıp web sitesi oluşturuyor. O işlem, kurulumu ile birlikte 10 dk sürüyor.
