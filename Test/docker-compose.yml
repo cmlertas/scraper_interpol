@@ -1,0 +1,48 @@
+version: '3'
+
+services:
+  web_server:
+    build:
+      context: ./container_b
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    networks:
+      - backend
+
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - backend
+
+  interpol_scraper:
+    build:
+      context: ./container_a
+    depends_on:
+      - rabbitmq
+    networks:
+      - backend
+
+  queue_consumer:
+    build:
+      context: ./container_c
+    depends_on:
+      - rabbitmq
+      - mongo
+    networks:
+      - backend
+
+  mongo:
+    image: "mongo:4.2"
+    ports:
+      - "27017:27017"
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
